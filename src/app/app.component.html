@@ -1,1 +1,7 @@
-<app-post-list></app-post-list>
+<h1>Fetch Api with HttpClient</h1>
+
+<button (click)="fetchData()">Fetch Data</button>
+
+<div *ngIf="data">
+  <pre>{{ data | json }}</pre>
+</div>
