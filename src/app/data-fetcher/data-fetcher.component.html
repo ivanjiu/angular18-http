@@ -1,0 +1,18 @@
+<h2>Data Fetcher</h2>
+
+<div>
+  <button (click)="fetchJsonData()">Fetch Json Data</button>
+  <div *ngIf="jsonData$ | async as jsonData">
+    <pre>{{ jsonData | json }}</pre>
+  </div>
+</div>
+
+<div>
+  <button (click)="fetchTextData()">Fetch Text Data</button>
+  <div *ngIf="textData">{{ textData }}</div>
+</div>
+
+<div>
+  <button (click)="fetchImageData()">Fetch Image Data</button>
+  <div *ngIf="imageData">{{ imageData.byteLength }}</div>
+</div>
